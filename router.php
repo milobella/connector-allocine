@@ -11,7 +11,8 @@ if (preg_match('/\.(?:png|jpg|jpeg|gif)$/', $_SERVER["REQUEST_URI"])) {
 	parse_str($_SERVER['QUERY_STRING'], $output);
     $allocine = new Allocine(ALLOCINE_PARTNER_KEY, ALLOCINE_SECRET_KEY);
 
-	$result = $allocine->showtimes($output["location"]);
+    // Hardly define Mouans-Sartoux code
+	$result = $allocine->showtimes("P1086");
 
 	echo $result;
 }
