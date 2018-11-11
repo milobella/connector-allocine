@@ -104,4 +104,36 @@ class Allocine
 
         return $response;
     }
+
+    public function theaters()
+    {
+        // build the params
+        $params = array(
+            'partner' => $this->_partner_key,
+            'format' => 'json',
+            'counter' => 25,
+            'page' => 1,
+            'code' => "Mouans-Sartoux"
+        );
+
+        // do the request
+        $response = $this->_do_request('theaterlist', $params);
+
+        return $response;
+    }
+
+    public function showtimes($theater)
+    {
+        // build the params
+        $params = array(
+            'partner' => $this->_partner_key,
+            'format' => 'json',
+            'theaters' => $theater,
+        );
+
+        // do the request
+        $response = $this->_do_request('showtimelist', $params);
+
+        return $response;
+    }
 }
