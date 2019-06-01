@@ -27,4 +27,4 @@ WORKDIR /app
 COPY . /app
 
 # Build the main command
-CMD php -S localhost:5555 router.php
+CMD php -S 0.0.0.0:5555 router.php

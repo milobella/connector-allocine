@@ -19,7 +19,7 @@ spec:
       containers:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
-          command: ["php", "-S", "localhost:{{ .Values.containerPort }}", "router.php"]
+          command: ["php", "-S", "0.0.0.0:{{ .Values.containerPort }}", "router.php"]
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - containerPort: {{ .Values.containerPort }}
