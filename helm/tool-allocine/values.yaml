@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: celiangarcia/tool-allocine
+  repository: celiangarcia/allocine-tool
   pullPolicy: Always
 
 containerPort: 5555
