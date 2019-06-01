@@ -3,13 +3,17 @@ allocine-api
 
 Allociné API libs
 
-# Installation
+## Installation
 
 ```bash
 $ sudo apt-get install php php-curl
 ```
 
-# Run
+## Run
 ```bash
-$ php -S localhost:8000 router.php
+$ php -S localhost:5555 router.php
 ```
+
+## CHANGELOGS
+- [Application changelog](./CHANGELOG.md)
+- [Helm chart changelog](./helm/tool-allocine/CHANGELOG.md)
