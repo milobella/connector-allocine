@@ -18,10 +18,10 @@ LABEL org.label-schema.build-date=$BUILD_DATE
 LABEL org.label-schema.name="$PROJECT_NAME::$MODULE_NAME"
 LABEL org.label-schema.description=$MODULE_DESCRIPTION
 LABEL org.label-schema.url="https://www.$PROJECT_NAME.com/"
-LABEL org.label-schema.vcs-url="https://$GITLAB_HOST/$PROJECT_NAME/$MODULE_NAME"
+LABEL org.label-schema.vcs-url="https://github.com/$PROJECT_NAME/$MODULE_NAME"
 LABEL org.label-schema.vcs-ref=$VCS_REF
 LABEL org.label-schema.version=$BUILD_VERSION
-LABEL org.label-schema.docker.cmd="docker run -it $GITLAB_HOST/$PROJECT_NAME/$MODULE_NAME:$BUILD_VERSION"
+LABEL org.label-schema.docker.cmd="docker run -it github.com/$PROJECT_NAME/$MODULE_NAME:$BUILD_VERSION"
 
 WORKDIR /app
 COPY . /app
